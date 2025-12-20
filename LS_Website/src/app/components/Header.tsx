@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "/assets/0ba20f724921c72e8c564bd1e69901ddf11995e4.png";
+import logo from "/src/assets/0ba20f724921c72e8c564bd1e69901ddf11995e4.png";
 import { scrollToTop, scrollToSection } from "../../utils/navigation";
 import { NavLink } from "./shared/NavLink";
 import { Button } from "./shared/Button";
