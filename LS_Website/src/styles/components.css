@@ -1,0 +1,108 @@
+@layer components {
+  /* Navigation Link Styles */
+  .nav-link {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .nav-link-desktop {
+    @apply relative text-foreground hover:text-primary transition-colors cursor-pointer pb-1;
+  }
+
+  .nav-link-mobile {
+    @apply relative inline-block text-foreground hover:text-primary transition-colors pb-1;
+  }
+
+  .nav-link-underline {
+    @apply absolute bottom-0 left-0 w-0 h-[2px] transition-all duration-300;
+    background-color: var(--primary);
+  }
+
+  .nav-link-desktop:hover .nav-link-underline,
+  .nav-link-mobile:hover .nav-link-underline {
+    @apply w-full;
+  }
+
+  /* Button Variants */
+  .btn {
+    @apply px-8 py-3 rounded-lg transition-colors cursor-pointer;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .btn-primary {
+    @apply text-primary-foreground;
+    background-color: var(--accent-coral);
+  }
+
+  .btn-primary:hover {
+    background-color: #f06ba3;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-foreground border-2 border-border hover:bg-black/5 hover:border-border/80;
+  }
+
+  .btn-tertiary {
+    @apply bg-transparent border-2;
+    color: var(--accent-coral);
+    border-color: var(--accent-coral);
+  }
+
+  .btn-tertiary:hover {
+    background-color: rgba(228, 87, 146, 0.1);
+  }
+
+  /* Icon Container */
+  .icon-container {
+    @apply w-16 h-16 rounded-lg flex items-center justify-center mb-6 mx-auto transition-colors;
+    background-color: rgba(228, 87, 146, 0.1);
+  }
+
+  .service-card:hover .icon-container {
+    background-color: rgba(228, 87, 146, 0.2);
+  }
+
+  /* Pixel Icon Styling */
+  .pixel-icon {
+    @apply w-8 h-8;
+    --fill-0: var(--accent-coral);
+  }
+
+  .pixel-icon path {
+    stroke: var(--accent-coral);
+    stroke-width: 0.5px;
+  }
+
+  /* Social Link */
+  .social-link {
+    @apply w-10 h-10 bg-secondary rounded-lg flex items-center justify-center transition-colors;
+  }
+
+  .social-link:hover {
+    background-color: var(--accent-coral);
+    color: white;
+  }
+
+  /* Service Card */
+  .service-card {
+    @apply bg-card p-8 rounded-xl border border-border transition-all cursor-pointer flex flex-col;
+  }
+
+  .service-card:hover {
+    @apply shadow-lg;
+    border-color: var(--primary);
+  }
+
+  /* Logo Carousel Animation */
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .carousel-scroll {
+    animation: scroll 60s linear infinite;
+  }
+}
