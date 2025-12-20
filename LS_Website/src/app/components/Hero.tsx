@@ -1,14 +1,14 @@
 import { ParticleNetwork } from "./ParticleNetwork";
 import { Button } from "./shared/Button";
 import { scrollToSection } from "../../utils/navigation";
-import microsoftLogo from "figma:asset/70806f53f23156ecee082393b11521af300fb6bd.png";
-import metaLogo from "figma:asset/b01e5bfed3137d5863a79b66480f51f67f13728d.png";
-import hereLogo from "figma:asset/b55cb9ce4c3ef270adb08358e2f429938b3c08e4.png";
-import retroStudiosLogo from "figma:asset/b19d10ce85e2f1fd58c0d272b1564787439b94bd.png";
-import scopelyLogo from "figma:asset/a315eca7695397976618184e74ee8d7097f6861b.png";
-import xboxLogo from "figma:asset/d7e61bfbeab7e966ac5d961430261d11a43e4b6b.png";
-import armyWestPointLogo from "figma:asset/aa71507becb3ca0d26639647f1d05be38b7c7bfa.png";
-import groundspeedLogo from "figma:asset/8ce2682dc458104cde508597edb2ee28bc99ea7f.png";
+import microsoftLogo from "/assets/70806f53f23156ecee082393b11521af300fb6bd.png";
+import metaLogo from "/assets/b01e5bfed3137d5863a79b66480f51f67f13728d.png";
+import hereLogo from "/assets/b55cb9ce4c3ef270adb08358e2f429938b3c08e4.png";
+import retroStudiosLogo from "/assets/b19d10ce85e2f1fd58c0d272b1564787439b94bd.png";
+import scopelyLogo from "/assets/a315eca7695397976618184e74ee8d7097f6861b.png";
+import xboxLogo from "/assets/d7e61bfbeab7e966ac5d961430261d11a43e4b6b.png";
+import armyWestPointLogo from "/assets/aa71507becb3ca0d26639647f1d05be38b7c7bfa.png";
+import groundspeedLogo from "/assets/8ce2682dc458104cde508597edb2ee28bc99ea7f.png";
 
 const logos = [
   { name: "Microsoft", src: microsoftLogo },
