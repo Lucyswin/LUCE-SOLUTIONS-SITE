@@ -1,5 +1,5 @@
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
-import logo from "figma:asset/0ba20f724921c72e8c564bd1e69901ddf11995e4.png";
+import logo from "/assets/0ba20f724921c72e8c564bd1e69901ddf11995e4.png";
 import { scrollToTop } from "../../utils/navigation";
 import { NavLink } from "./shared/NavLink";
 import { SocialLink } from "./shared/SocialLink";
