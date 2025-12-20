@@ -1,5 +1,5 @@
 import { CheckCircle } from "lucide-react";
-import aboutImage from "/assets/ff567f04c9e3060ea4028409ed347fb2d5bbda37.png";
+import aboutImage from "/src/assets/ff567f04c9e3060ea4028409ed347fb2d5bbda37.png";
 import { ParticleNetwork } from "./ParticleNetwork";
 
 const expertise = [
