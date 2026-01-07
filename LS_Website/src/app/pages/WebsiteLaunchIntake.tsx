@@ -1806,9 +1806,10 @@ END OF SUBMISSION
               </div>
 
               <div className="max-w-md mx-auto">
-                /* Original PayPal container - commented out */
                 
-                /* <div id="paypal-container-XY8K2RBF8KV6A"></div> */
+                {/* Original PayPal container - commented out */}
+                
+                {/* <div id="paypal-container-XY8K2RBF8KV6A"></div> */}
                 {/* New PayPal Buy Now button */}
                 <div>
                   <style dangerouslySetInnerHTML={{__html: `.pp-XY8K2RBF8KV6A{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:3.125rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1.125rem;line-height:1.5rem;cursor:pointer;}`}} />
