@@ -328,7 +328,7 @@ END OF SUBMISSION
         script.setAttribute('data-sdk-integration-source', 'button-factory');
       } else if (formData.plan === "build-only") {
         // Build Only: hosted button
-        script.src = 'https://www.paypal.com/sdk/js?client-id=AcOLVyUQFOcplZpXwruEWW6GeT8Q0gOlkVe1iUnR2Uz2lqU7GdDpMd8-sZB_uoZDFw5FuG5yRMweT-8_&components=hosted-buttons&enable-funding=venmo&currency=USD';
+        script.src = 'https://www.paypal.com/sdk/js?client-id=BAATRiYE82NIqFuoFLdKHHi34wAXaNLGr7FzE2Mw5vqLWlaqINm1QCv4p7o-JeGV04zjJ1JQmJ8-T2fPz8&components=hosted-buttons&enable-funding=venmo&currency=USD';
       }
       
       script.async = true;
