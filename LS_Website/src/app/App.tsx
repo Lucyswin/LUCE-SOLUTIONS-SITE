@@ -1,11 +1,34 @@
+import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Services } from "./components/Services";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { WebsiteLaunchIntake } from "./pages/WebsiteLaunchIntake";
 
 export default function App() {
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const handleLocationChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+
+    window.addEventListener("popstate", handleLocationChange);
+    return () => window.removeEventListener("popstate", handleLocationChange);
+  }, []);
+
+  // TEMPORARY: Show intake page for preview/editing
+  // Remove this line when done editing to restore normal routing
+  return <WebsiteLaunchIntake />;
+
+  // Route to intake page
+  if (currentPath === "/website-launch-intake") {
+    return <WebsiteLaunchIntake />;
+  }
+
+  // Default route - main site
   return (
     <>
       <Header />
