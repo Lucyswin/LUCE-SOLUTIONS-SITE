@@ -811,7 +811,7 @@ END OF SUBMISSION
                 {/* Connector line - positioned before circle except for first step */}
                 {index > 0 && (
                   <div
-                    className="absolute top-5 right-1/2 h-[2px] transition-all"
+                   className="absolute top-[6px] md:top-5 right-1/2 h-[2px] transition-all"
                     style={{
                       width: '100%',
                       backgroundColor: completedSteps.includes(STEPS[index - 1].id)
@@ -825,11 +825,11 @@ END OF SUBMISSION
                 <div className="relative z-10 flex flex-col items-center">
                   <div
                     onClick={() => handleStepClick(step.id)}
-                    className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all ${
+                    className={`w-3 h-3 md:w-10 md:h-10 rounded-full flex items-center justify-center border-2 transition-all ${
                       completedSteps.includes(step.id)
                         ? 'border-[#e45792]'
                         : currentStep === step.id
-                        ? 'border-[#e45792]'
+                       ? 'border-[#e45792] max-md:shadow-[0_0_12px_4px_rgba(228,87,146,0.5)]'
                         : 'bg-background border-border'
                     } ${
                       step.id === currentStep || completedSteps.includes(step.id)
@@ -871,9 +871,9 @@ END OF SUBMISSION
                   >
                     {step.label}
                   </span>
-                  <span
+                                    <span
                     onClick={() => handleStepClick(step.id)}
-                    className={`text-xs mt-2 text-center md:hidden ${
+                    className={`text-[10px] md:text-xs mt-2 text-center md:hidden ${
                       currentStep === step.id ? 'font-medium' : 'text-muted-foreground'
                     } ${
                       step.id === currentStep || completedSteps.includes(step.id)
