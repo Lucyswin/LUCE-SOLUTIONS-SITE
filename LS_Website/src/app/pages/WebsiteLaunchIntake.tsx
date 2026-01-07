@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Check, Upload, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "../components/shared/Button";
-import fullyManagedImage from "figma:asset/468095fb9f649e80a3e893d10733f8b8267bd6d1.png";
-import buildOnlyImage from "figma:asset/78c3f4655b402358ffad0f0bf0bed43bca7e6fd1.png";
+import fullyManagedImage from "/src/assets/fullymanagedtier2.png"; 
+import buildOnlyImage from "/src/assets/basictier.png"; 
 
 // PayPal SDK type declaration
 declare global {
