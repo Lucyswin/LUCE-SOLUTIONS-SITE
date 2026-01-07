@@ -842,11 +842,11 @@ END OF SUBMISSION
                         : undefined
                     }}
                   >
-                    {completedSteps.includes(step.id) ? (
-                      <Check className="w-5 h-5 text-white" />
+                      {completedSteps.includes(step.id) ? (
+                      <Check className="w-5 h-5 text-white hidden md:block" />
                     ) : (
                       <span
-                        className={`text-sm font-medium ${
+                        className={`text-sm font-medium hidden md:inline ${
                           currentStep === step.id ? 'text-white' : 'text-muted-foreground'
                         }`}
                       >
