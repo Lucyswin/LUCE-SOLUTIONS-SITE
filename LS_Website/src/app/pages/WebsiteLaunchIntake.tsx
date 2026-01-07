@@ -605,6 +605,29 @@ END OF SUBMISSION
     }
   };
 
+   // Drag and drop handlers
+  const handleDragOver = (e: React.DragEvent<HTMLLabelElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  const handleDrop = (e: React.DragEvent<HTMLLabelElement>, fieldName: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const file = e.dataTransfer.files?.[0] || null;
+    if (file) {
+      setFormData({
+        ...formData,
+        [fieldName]: file,
+      });
+
+      if (errors[fieldName]) {
+        setErrors({ ...errors, [fieldName]: "" });
+      }
+    }
+  };
+
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
@@ -1461,11 +1484,13 @@ END OF SUBMISSION
                     <p className="text-sm text-muted-foreground mb-2">PNG, SVG, or JPG</p>
                     <label
                       htmlFor="logoFile"
-                      className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer transition-colors ${
+                       className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer transition-colors ${
                         formData.logoFile
                           ? "border-primary bg-primary/5"
                           : "border-border hover:border-primary/50 bg-input-background hover:bg-input-background"
                       }`}
+                      onDragOver={handleDragOver}
+                      onDrop={(e) => handleDrop(e, "logoFile")}
                     >
                       <div className="flex flex-col items-center justify-center pt-5 pb-6">
                         <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
@@ -1505,15 +1530,17 @@ END OF SUBMISSION
                     </p>
                     <label
                       htmlFor="heroImage"
-                      className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer transition-colors ${
+                       className={`flex flex-col items-center justify-center w-full h-32 border-2 border-dashed rounded-lg cursor-pointer transition-colors ${
                         formData.heroImage
                           ? "border-primary bg-primary/5"
                           : "border-border hover:border-primary/50 bg-input-background hover:bg-input-background"
                       }`}
+                      onDragOver={handleDragOver}
+                      onDrop={(e) => handleDrop(e, "heroImage")}
                     >
                       <div className="flex flex-col items-center justify-center pt-5 pb-6">
                         <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
-                        {formData.heroImage ? (
+                         {formData.heroImage ? (
                           <p className="text-sm text-foreground font-medium">{formData.heroImage.name}</p>
                         ) : (
                           <>
@@ -1565,6 +1592,8 @@ END OF SUBMISSION
                           ? "border-primary bg-primary/5"
                           : "border-border hover:border-primary/50 bg-input-background hover:bg-input-background"
                       }`}
+                      onDragOver={handleDragOver}
+                      onDrop={(e) => handleDrop(e, "aboutImage")}
                     >
                       <div className="flex flex-col items-center justify-center pt-5 pb-6">
                         <Upload className="w-8 h-8 mb-2 text-muted-foreground" />
