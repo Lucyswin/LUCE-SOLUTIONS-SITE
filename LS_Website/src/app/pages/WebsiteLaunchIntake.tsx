@@ -1912,7 +1912,7 @@ END OF SUBMISSION
                 <>
                   <h2 className="text-3xl md:text-4xl mb-4">Payment received and intake submitted!</h2>
                   <p className="text-muted-foreground text-lg mb-2">
-                    Thank you! I will follow up within 1 business day.
+                    Thank you! We will follow up within 1 business day.
                   </p>
                   <p className="text-sm text-muted-foreground mt-4">
                     You can safely close this page.
