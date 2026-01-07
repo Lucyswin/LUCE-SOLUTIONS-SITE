@@ -1812,7 +1812,7 @@ END OF SUBMISSION
                 {/* <div id="paypal-container-XY8K2RBF8KV6A"></div> */}
                 {/* New PayPal Buy Now button */}
                 <div>
-                  <style dangerouslySetInnerHTML={{__html: `.pp-XY8K2RBF8KV6A{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:3.125rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1.125rem;line-height:1.5rem;cursor:pointer;}`}} />
+                  <style dangerouslySetInnerHTML={{__html: `.pp-XY8K2RBF8KV6A{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:3.125rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1.125rem;line-height:3.125rem;cursor:pointer;}`}} />
                   <div style={{display:'inline-grid',justifyItems:'center',alignContent:'start',gap:'0.5rem'}}>
                     <a href="https://www.paypal.com/ncp/payment/XY8K2RBF8KV6A" target="_blank" rel="noopener noreferrer" className="pp-XY8K2RBF8KV6A" style={{textDecoration:'none',display:'inline-block'}}>Buy Now</a>
                     <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
