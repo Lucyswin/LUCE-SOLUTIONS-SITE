@@ -19,10 +19,6 @@ export default function App() {
     return () => window.removeEventListener("popstate", handleLocationChange);
   }, []);
 
-  // TEMPORARY: Show intake page for preview/editing
-  // Remove this line when done editing to restore normal routing
-  return <WebsiteLaunchIntake />;
-
   // Route to intake page
   if (currentPath === "/website-launch-intake") {
     return <WebsiteLaunchIntake />;
