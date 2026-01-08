@@ -17,6 +17,19 @@ export default function App() {
     return () => window.removeEventListener("popstate", handleLocationChange);
   }, []);
 
+ // Handle hash navigation on page load (for links from other pages)
+  useEffect(() => {
+    if (currentPath === '/' && window.location.hash) {
+      const sectionId = window.location.hash.substring(1); // Remove the '#'
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100); // Small delay to ensure page is rendered
+    }
+  }, [currentPath]);
+  
   if (currentPath === "/website-launch-intake") return <WebsiteLaunchIntake />;
 
   return (
