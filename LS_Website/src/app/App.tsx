@@ -32,7 +32,7 @@ export default function App() {
         <PromoBanner />
         <Header />
       </div>
-      <main>
+      <main className="pt-[140px]">
         <Hero />
         <Services />
         <About />
