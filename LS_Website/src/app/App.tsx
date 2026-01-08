@@ -12,34 +12,36 @@ export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {
-    const handleLocationChange = () => {
-      setCurrentPath(window.location.pathname);
-    };
-
+    const handleLocationChange = () => setCurrentPath(window.location.pathname);
     window.addEventListener("popstate", handleLocationChange);
     return () => window.removeEventListener("popstate", handleLocationChange);
   }, []);
 
-  // Route to intake page
-  if (currentPath === "/website-launch-intake") {
-    return <WebsiteLaunchIntake />;
-  }
+  if (currentPath === "/website-launch-intake") return <WebsiteLaunchIntake />;
 
-  // Default route - main site
   return (
     <>
+      {/* Promo banner fixed at top */}
       <div className="fixed top-0 left-0 right-0 z-50">
         <PromoBanner />
       </div>
+
+      {/* Header fixed below banner */}
       <div className="fixed top-[42px] sm:top-[46px] left-0 right-0 z-40">
-        <Header style="position: fixed; top: 40px;" />
+        <Header />
       </div>
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <Contact />
+
+      {/* Push page content down so it’s not hidden behind fixed elements */}
+      <main className="pt-[42px] sm:pt-[46px]">
+        {/* Add header height too. Example assumes header is ~72px desktop, adjust to yours */}
+        <div className="pt-[72px]">
+          <Hero />
+          <Services />
+          <About />
+          <Contact />
+        </div>
       </main>
+
       <Footer />
     </>
   );
