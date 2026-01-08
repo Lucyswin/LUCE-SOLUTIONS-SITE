@@ -23,7 +23,7 @@ const logos = [
 
 export function Hero() {
   return (
- <section className="relative min-h-[75vh] flex flex-col justify-center px-4 pt-36 pb-8">
+ <section className="relative min-h-[75vh] flex flex-col justify-center px-4 pt-24 pb-8">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <ParticleNetwork className="w-full h-full object-cover scale-150" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background"></div>
