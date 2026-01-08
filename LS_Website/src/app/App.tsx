@@ -30,6 +30,8 @@ export default function App() {
     <>
       <div className="fixed top-0 left-0 right-0 z-50">
         <PromoBanner />
+      </div>
+      <div className="fixed top-[42px] sm:top-[46px] left-0 right-0 z-40">
         <Header />
       </div>
       <main>
