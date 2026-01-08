@@ -7,7 +7,15 @@ export function scrollToSection(sectionId: string): void {
   if (window.location.pathname === '/') {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      // Calculate offset for fixed header (banner + nav = ~140px, add extra 20px padding)
+      const offset = 160;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
     }
   } else {
     // Navigate to home page with hash
