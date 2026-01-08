@@ -5,6 +5,7 @@ import { Services } from "./components/Services";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { PromoBanner } from "./components/PromoBanner";
 import { WebsiteLaunchIntake } from "./pages/WebsiteLaunchIntake";
 
 export default function App() {
@@ -27,7 +28,10 @@ export default function App() {
   // Default route - main site
   return (
     <>
-      <Header />
+        <div className="fixed top-0 left-0 right-0 z-50">
+        <PromoBanner />
+        <Header />
+      </div>
       <main>
         <Hero />
         <Services />
