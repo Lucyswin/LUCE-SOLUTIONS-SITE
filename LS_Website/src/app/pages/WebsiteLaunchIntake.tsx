@@ -3,6 +3,7 @@ import { Check, Upload, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "../components/shared/Button";
 import fullyManagedImage from "../../assets/FullyManagedTier2.png";
 import buildOnlyImage from "../../assets/BasicTier.png";
+import { Header } from "../components/Header";
 
 // PayPal SDK type declaration
 declare global {
@@ -784,9 +785,14 @@ END OF SUBMISSION
     }
   };
 
-  return (
-    <div className="min-h-screen bg-background py-12 px-4">
-      <div className="container mx-auto max-w-3xl">
+return (
+    <>
+      <div className="fixed top-0 left-0 right-0 z-40">
+        <Header />
+      </div>
+      <div className="min-h-screen bg-background pt-24 py-12 px-4">
+        <div className="container mx-auto max-w-3xl">
+          
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-3xl md:text-5xl mb-4">Launch Your Website</h1>
@@ -1993,5 +1999,6 @@ END OF SUBMISSION
         </form>
       </div>
     </div>
+  </>
   );
 }
