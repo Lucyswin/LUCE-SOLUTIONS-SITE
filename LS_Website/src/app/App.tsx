@@ -18,13 +18,21 @@ export default function App() {
   }, []);
 
  // Handle hash navigation on page load (for links from other pages)
-  useEffect(() => {
+ useEffect(() => {
     if (currentPath === '/' && window.location.hash) {
       const sectionId = window.location.hash.substring(1); // Remove the '#'
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
+          // Calculate offset for fixed header (banner + nav = ~140px, add extra 20px padding)
+          const offset = 160;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
         }
       }, 100); // Small delay to ensure page is rendered
     }
