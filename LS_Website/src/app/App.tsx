@@ -32,7 +32,7 @@ export default function App() {
         <PromoBanner />
       </div>
       <div className="fixed top-[42px] sm:top-[46px] left-0 right-0 z-40">
-        <Header />
+        <Header style="position: fixed; top: 40px;" />
       </div>
       <main>
         <Hero />
